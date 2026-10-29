@@ -106,6 +106,57 @@ button{
     background-color: rgb(47, 56, 154);
     margin-right:10px;
 }
+
+div.benefits_head{
+    display:inline-block;
+    margin-top: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to top right, orange, lightyellow, lightblue);
+    padding: 10px;
+    border-radius: 20px;
+    color: chocolate;
+    box-shadow: 4px 5px 7px lightblue;
+}
+
+.benefit img{
+    margin-top: 50px;
+    width:400px;
+    border-radius: 50%;
+    box-shadow: 4px 3px 10px lightblue;
+}
+
+.benefits{
+    border-top: 4px solid lightyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, lightyellow, white);
+    
+}
+
+h2{
+    color: chocolate;
+    border-top: 1px solid rgb(165, 165, 28);
+    padding-top:10px;
+    text-shadow: 2px 1px 5px rgb(214, 203, 203);
+}
+
+.benefit1 h2{
+    margin-top: 25px;
+}
+
+.benefit p{
+    width: 300px;
+    text-align: justify;
+    font-size: 18px;
+    background: linear-gradient(to top right, lightyellow, lightblue);
+    padding: 15px;
+    border-radius: 20px;
+        box-shadow: 4px 3px 10px lightblue;
+
+}
+
 </style>
 <body>
     
@@ -132,7 +183,26 @@ button{
     </div>
     <button>Find destination base on your favourite -></button>
     
+    <!--BENEFITS-->
+    <div class="benefits_head">BENEFITS</div>
 
+    <div class="benefits">
+        <div class="benefit benefit1">
+            <img src="./images/traiNghiem.jpg" alt="experience">
+            <h2>Experience</h2>
+            <p>Showcasing captivating destinations that allow users to experience the multi-faceted charm of Saigon through all senses: from the bustling lifestyle in old apartment cafes and diverse alleyway food tours, to historic explorations and dynamic modern entertainment hotspots.</p>
+        </div>
+        <div class="benefit benefit2">
+            <img src="./images/ketNoi.jpg" alt="connection">
+            <h2>Connection</h2>
+            <p>Optimizing the travel experience, allowing users to easily search for captivating locations in HCMC, receive smart recommendations, and choose the most suitable mode of transport for navigating local traffic.</p>
+        </div>
+        <div class="benefit benefit3">
+            <img src="./images/traiTim.jpg" alt="heart">
+            <h2>Persnalization</h2>
+            <p>Personalizing the journey from the very first step, allowing users to take a quick preferences survey to instantly unlock ideal location recommendations and tailored transport options, custom-made for their specific travel style in HCMC.</p>
+        </div>
+    </div>
    
 </body>
 </html>
