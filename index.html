@@ -107,7 +107,7 @@ button{
     margin-right:10px;
 }
 
-div.benefits_head{
+div.benefits_head, div.find{
     display:inline-block;
     margin-top: 50px;
     font-size: 36px;
@@ -135,7 +135,7 @@ div.benefits_head{
     
 }
 
-h2{
+.benefit h2{
     color: chocolate;
     border-top: 1px solid rgb(165, 165, 28);
     padding-top:10px;
@@ -153,7 +153,7 @@ h2{
     background: linear-gradient(to top right, lightyellow, lightblue);
     padding: 15px;
     border-radius: 20px;
-        box-shadow: 4px 3px 10px lightblue;
+    box-shadow: 4px 3px 10px lightblue;
 
 }
 
@@ -203,6 +203,110 @@ h2{
             <p>Personalizing the journey from the very first step, allowing users to take a quick preferences survey to instantly unlock ideal location recommendations and tailored transport options, custom-made for their specific travel style in HCMC.</p>
         </div>
     </div>
+
+    <!--FINDING-->
+
+    <div class="find">FIND YOUR IDEAL DESTINATION</div>
    
+    <form action="search">
+        <label for="district">District: </label>
+        <select name="district" id="district">
+            <option value="1">District 1</option>
+            <option value="2">District 2</option>
+            <option value="3">District 3</option>
+            <option value="4">District 4</option>
+            <option value="5">District 5</option>
+            <option value="6">District 6</option>
+            <option value="7">District 7</option>
+            <option value="8">District 8</option>
+            <option value="9">District 9</option>
+            <option value="10">District 10</option>
+            <option value="11">District 11</option>
+            <option value="12">District 12</option>
+            <option value="13">Binh Thanh District</option>
+            <option value="14">Go Vap District</option>
+            <option value="15">Phu Nhuan District</option>
+            <option value="16">Tan Binh District</option>
+            <option value="17">Tan Phu District</option>
+            <option value="18">Binh Tan District</option>
+            <option value="19">Thu Duc City</option>
+            <option value="20">Nha Be District</option>
+            <option value="21">Hoc Mon District</option>
+            <option value="22">Cu Chi District</option>
+            <option value="23">Binh Chanh District</option>
+            <option value="24">Can Gio District</option>
+        </select>
+
+        <label for="form">Form of travel: </label>
+        <select name="form" id="form">
+            <option value="entertainment">Entertainment</option>
+            <option value="sightseeing">Sightseeing</option>
+            <option value="food-drink">Food &amp; Drink</option>
+        </select>
+    </form>
+    
+    <div class="searchByName">
+        <div>If you already have a place in mind, just let us know!</div>
+        <div>We can help you with the perfect time and transit options!</div>
+
+        <form action="search">
+            <label for="place_name">Search for place: </label>
+            <input type="text" id="place_name" placeholder="Name of that place...">
+        </form>
+    </div>
+
+    <!--RECOMMENDATION-->
+
+    <h1>RECOMMENDATION</h1>
+    
+    <div class="recommendations">
+        <div class="dragon">
+            <img src="./images/dragonWharf.jpg" alt="dragonWharf">
+            <h2>Dragon Wharf</h2>
+            <h3>Bến Nhà Ròng</h3>
+        </div>
+           
+         <div class="independence">
+            <img src="./images/IndependencePalace.jpg" alt="IndependencePalace">
+            <h2>Independence Palace</h2>
+            <h3>Dinh Độc Lập</h3>
+        </div>
+            
+         <div class="benThanh">
+             <img src="./images/BenThanhMarket.jpg" alt="BenThanhMarket">
+            <h2>Ben Thanh Market</h2>
+            <h3>Chợ Bến Thành</h3>
+        </div>
+
+        <div class="cathedral">
+             <img src="./images/SaigonNotre-DameCathedral.jpg" alt="SaigonNotre-DameCathedral">
+            <h2>Saigon Notre-Dame Cathedral</h2>
+            <h3>Nhà Thờ Đức Bà</h3>
+        </div>
+
+        <div class="war">
+             <img src="./images/WarRemnantsMuseum.jpg" alt="WarRemnantsMuseum">
+             <h2>War Remnant sMuseum</h2>
+             <h3>Bảo Tàng Chứng Tích Chiến Tranh</h3>
+        </div>
+
+         <div class=HoThiKy>
+             <img src="./images/HoThiKyFoodMarket.jpg" alt="HoThiKyFoodMarket">
+             <h2>Ho Thi Ky FoodMarket</h2>
+             <h3>Phố Ẩm Thực Hồ Thị Kỷ</h3>
+        </div>
+
+         <div class="waterBus">
+             <img src="./images/waterBus.jpg" alt="waterBus">
+             <h2>Water Bus</h2>
+         </div>
+
+         <div class=zoo>
+             <img src="./images/SaiGonZoo.jpg" atl="SaiGonZoo">
+             <h2>SaiGon Zoo</h2>
+             <h3>Thảo Cầm Viên</h3>
+        </div>
+    </div>
+
 </body>
 </html>
