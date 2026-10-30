@@ -106,7 +106,7 @@
         margin-right:10px;
     }
 
-    div.benefits_head, div.find{
+    div.benefits_head, div.find, div.about_us{
         display:inline-block;
         margin-top: 50px;
         font-size: 36px;
@@ -123,6 +123,11 @@
         width:400px;
         border-radius: 50%;
         box-shadow: 4px 3px 10px lightblue;
+        transition: transform 0.3s ease-out;
+    }
+
+    .benefit img:hover{
+        transform: translate(0,-15px);
     }
 
     .benefits{
@@ -156,6 +161,49 @@
 
     }
 
+    .mem img{
+        margin-top: 50px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 35% 50%;
+        box-shadow: 3px 3px 6px gray;
+        transition: transform 0.3s ease-out;
+    }
+
+    .mem img:hover{
+        transform: scale(1.06);
+    }
+
+    .members{
+        display: flex;
+        justify-content: space-around;
+        background: linear-gradient(to bottom, lightblue, white);
+    }
+
+    div.about_us{
+        box-shadow: 3px 3px 7px gray ;
+    }
+
+    .mem h2{
+        text-align: center;
+        color: rgb(68, 68, 154);
+    }
+
+    .mem p{
+        text-align: center;
+        font-size: 19px;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    p.email{
+        margin-top: 5px;
+        font-weight: normal;
+    }
+
+   
 </style>
 <body>
     
@@ -306,6 +354,41 @@
              <h3>Thảo Cầm Viên</h3>
         </div>
     </div>
+
+
+    <div class="about_us">ABOUT US</div>
+    
+    <div class="members">
+        <div class="mem mem1">
+            <img src="./images/mem_KhanhThy.jpg" alt="KhanhThy">
+            <h2>Trần Khánh Thy</h2>
+            <p>Team Member</p>
+            <p class="email">Email: 2551052060thy@ou.edu.vn</p>
+        </div>
+           
+        <div class="mem mem2">
+            <img src="./images/avata.jpg" alt="ThienHuong">
+            <h2>Quách Nhị Thiên Hương</h2>
+            <p>Team Leader</p>
+            <p class="email">Email: 2551052023huong@ou.edu.vn</p>
+        </div>
+
+         <div class="mem mem3">
+            <img src="./images/avata.jpg" alt="NgocHuong">
+            <h2>Nguyễn Thị Ngọc Hương</h2>
+            <p>Team Member</p>
+            <p class="email">Email: 2551052022huong@ou.edu.vn</p>
+        </div>
+
+        <div class="mem mem4">
+            <img src="./images/avata.jpg" alt="ThanhVy">
+            <h2>Nguyễn Võ Thanh Vy</h2>
+            <p>Team Member</p>
+            <p class="email">Email: 2551052067vy@ou.edu.vn</p>
+        </div>
+    </div>
+
+
 
 </body>
 </html>
