@@ -270,6 +270,31 @@
         margin-right: auto;
         background: linear-gradient(to top right, orange, lightyellow, lightblue);
     }
+
+    @media screen and (max-width:1200px){
+        .benefits{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .members{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .mem h2, .mem p{
+           text-align: left;
+        }
+    }
+
+    @media screen and (max-width:628px){
+        .members{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 </style>
 
 <body>
