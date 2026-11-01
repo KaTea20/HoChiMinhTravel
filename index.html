@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    *{
+    * {
         box-sizing: border-box;
     }
 
@@ -15,11 +15,49 @@
         box-sizing: border-box;
     }
 
+    .language {
+        margin-right: 0;
+        font-size: 15px;
+    }
+
+    .right-cluster {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .right-cluster .language,
+    .right-cluster .sign_in {
+        font-size: 20px;
+    }
+
+    .right-cluster .language {
+        margin-right: 20px;
+        
+    }
+    .select-lang {
+         gap: 5px;
+        display: flex;
+    }
+    .select-lang button {
+        background: white;
+        gap:10px;
+        font-family: inherit;
+        border: none;
+    }
+    .language.active, .language{
+        margin-right:0;
+    }
+    .language.active{
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
     .full-width-line {
         width: 100%;
         border: none;
         height: 2px;
-        background-color: rgba(4, 34, 54);
+        background-color: rgb(189, 189, 39);
         box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.3);
 
     }
@@ -57,10 +95,11 @@
 
     .head {
         display: flex;
-        justify-content:
-            space-between;
+        justify-content: space-between;
         align-items: center;
         position: relative;
+        width: 100%;
+        height: 100px;
     }
 
     nav>div span {
@@ -69,17 +108,18 @@
 
     div.user img {
         width: 40px;
-        margin-left: 15px;
+        margin-left: auto;
     }
 
     div.sign_in {
-        margin-left: auto;
+        margin-right: 0;
+        width: fit-content;
         font-size: 15px;
     }
 
     .hero img {
         border-radius: 0 50% 50% 0;
-        width: 60%;
+        width: 55%;
         height: 600px;
         display: block;
         object-fit: cover;
@@ -104,12 +144,11 @@
 
     .hero-box p {
         width: 100%;
-        text-align: left;
-        font-weight: bold;
+        text-align: center;
         margin: 0;
         font-size: 20px;
-        font-weight: 500;
         line-height: 1.4;
+        align-items: center;
     }
 
     .hero h1 {
@@ -118,10 +157,11 @@
         text-align: center;
         font-weight: bold;
         margin: 0;
+        font-style: bold;
     }
 
     .hero-box button {
-        width: 400px;
+        width: 100%;
         height: 40px;
         color: white;
         margin-top: 50px;
@@ -131,6 +171,7 @@
         background: linear-gradient(135deg, rgba(4, 34, 54, 0.839), rgba(255, 255, 255, 0.3));
         border: 1px solid black;
         border-radius: 20px;
+        font-family: inherit;
     }
 
     div.benefits_head,
@@ -213,11 +254,11 @@
         transition: transform 0.3s ease-out;
     }
 
-    .mem2 img{
+    .mem2 img {
         object-position: 50% 20%;
     }
 
-    .mem3 img{
+    .mem3 img {
         object-position: 45% 75%;
     }
 
@@ -266,7 +307,7 @@
     .form {
         display: inline-flex;
         align-items: center;
-        border: 1px solid rgba(4, 34, 54);
+        border: 1px solid rgb(189, 189, 39);
         border-radius: 50px;
         box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.15);
         height: 44px;
@@ -288,11 +329,13 @@
 
     .searchByName {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap:20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
         max-width: 1100px;
         margin: 50px auto;
         align-items: start;
+        background: linear-gradient(to bottom right, rgb(251, 251, 237), white, rgb(247, 247, 230));
+        border-radius: 20px;
     }
 
     #p {
@@ -301,18 +344,19 @@
         font-size: 18px;
     }
 
-    .column{
+    .column {
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
+
     .c-img {
         position: relative;
         border-radius: 20px;
         overflow: hidden;
         width: 100%;
     }
-    
+
     .c-img img {
         width: 100%;
         height: 240px;
@@ -322,23 +366,34 @@
         animation: fade 8s infinite;
     }
 
-    .c-img img:nth-child(2){
+    .c-img img:nth-child(2) {
         position: absolute;
         inset: 0;
     }
 
-    .c-img img:nth-of-type(2), .c-img span:nth-of-type(2){
+    .c-img img:nth-of-type(2),
+    .c-img span:nth-of-type(2) {
         animation-delay: -4s;
     }
 
+    @keyframes fade {
 
-    @keyframes fade{
-        0%, 40% {opacity: 1;}
-        50%, 90% {opacity: 0;}
-        100% {opacity: 1;}
+        0%,
+        40% {
+            opacity: 1;
+        }
+
+        50%,
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
-/* .col3{
+    /* .col3{
     gap:20px;
 } */
     .c-img-title {
@@ -348,46 +403,49 @@
         color: white;
         font-size: 18px;
         font-weight: 600;
-        text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
         background-color: rgba(0, 0, 0, 0.45);
-        animation: fade 8s infinite; 
+        animation: fade 8s infinite;
     }
 
-    .c3 img{
+    .c3 img {
         height: 380px;
     }
-    .c-title{
+
+    .c-title {
         position: absolute;
-    bottom: 15px;
-    right: 15px;
-    color: white;
-    font-size: 13px;
-    font-weight: 600;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        bottom: 15px;
+        right: 15px;
+        color: white;
+        font-size: 13px;
+        font-weight: 600;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
     }
-    .column form{
+
+    .column form {
         height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-    .column p{
+
+    .column p {
         font-size: 20px;
-        margin:0;
+        margin: 0;
     }
 
-    input[type="text"]{
+    input[type="text"] {
         display: block;
         align-items: center;
         border: 1px solid rgba(4, 34, 54);
         border-radius: 50px;
         box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.15);
         height: 44px;
-        text-align:left;
+        text-align: left;
         width: 100%;
     }
 
-    .column label{
+    .column label {
         font-size: 20px;
         padding: 0 0 10px 0;
     }
@@ -403,11 +461,12 @@
             display: flex;
             justify-content: center;
         }
-        
+
         .members {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
+
         .mem h2,
         .mem p {
             text-align: left;
@@ -428,24 +487,22 @@
         }
     }
 
-    .mem4 img{
+    .mem4 img {
         object-position: 50% 10%;
     }
 
-    .c-img img{
+    .c-img img {
         transition: transform 0.3s ease;
 
     }
-    
-    .c-img:hover img{
+
+    .c-img:hover img {
         transform: scale(1.13);
     }
 
-    .c3 img:nth-of-type(2){
+    .c3 img:nth-of-type(2) {
         object-position: 35% 50%;
     }
-   
-    
 </style>
 
 <body>
@@ -453,11 +510,16 @@
     <nav>
         <div class="head">
             <div class="logo"><img src="./images/logoweb.png"><span>HO CHI MINH CITY-LOCAL TRAVEL</span></div>
-
-            <div class="sign_in">Sign in</div>
-
-            <div class="user"><img src="./images/avata.jpg"></div>
-
+            <div class="right-cluster">
+                <div class="select-lang">
+                    <button class="language active">EN</button>
+                    <span>/</span>
+                    <button class="language">VI</button>
+                </div>
+                <div class="sign_in">Sign in</div>
+                <div class="user"><img src="./images/avata.jpg"></div>
+            </div>
+        </div>
         </div>
 
         <ul class="menu">
@@ -542,7 +604,7 @@
                     <option value="23">Binh Chanh District</option>
                     <option value="24">Can Gio District</option>
                 </select>
-                <img src="./images/search_img.png">
+                <img src="./images/search.png">
             </form>
         </div>
 
@@ -555,12 +617,13 @@
                     <option value="sightseeing">Sightseeing</option>
                     <option value="food-drink">Food &amp; Drink</option>
                 </select>
-                <img src="./images/search_img.png">
+                <img src="./images/search.png">
             </form>
         </div>
     </div>
-    
+
     <hr class="full-width-line">
+
     <div class="searchByName">
         <div class="column col1">
             <div class="c-text">
@@ -673,7 +736,7 @@
             <p class="email">Email: 2551052023huong@ou.edu.vn</p>
         </div>
 
-         <div class="mem mem3">
+        <div class="mem mem3">
             <img src="./images/mem_NgocHuong.jpg" alt="NgocHuong">
             <h2>Nguyễn Thị Ngọc Hương</h2>
             <p>Team Member</p>
@@ -687,9 +750,5 @@
             <p class="email">Email: 2551052067vy@ou.edu.vn</p>
         </div>
     </div>
-
-
-
 </body>
-
 </html>
