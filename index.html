@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <style>
     * {
@@ -26,32 +27,18 @@
         gap: 15px;
     }
 
-    .right-cluster .language,
+    .right-cluster,
     .right-cluster .sign_in {
         font-size: 20px;
-    }
-
-    .right-cluster .language {
-        margin-right: 20px;
+        color: rgb(6, 94, 96);
         
     }
-    .select-lang {
-         gap: 5px;
-        display: flex;
+
+    .right-cluster #lang {
+        margin-right: 20px;
+        width:150px;
     }
-    .select-lang button {
-        background: white;
-        gap:10px;
-        font-family: inherit;
-        border: none;
-    }
-    .language.active, .language{
-        margin-right:0;
-    }
-    .language.active{
-        text-decoration: underline;
-        text-underline-offset: 4px;
-    }
+    
 
     .full-width-line {
         width: 100%;
@@ -108,7 +95,10 @@
 
     div.user img {
         width: 40px;
+        height: 40px;
+        border-radius: 50%;
         margin-left: auto;
+
     }
 
     div.sign_in {
@@ -168,8 +158,6 @@
         font-size: 16px;
         text-align: center;
         font-weight: bold;
-        background: linear-gradient(135deg, rgba(4, 34, 54, 0.839), rgba(255, 255, 255, 0.3));
-        border: 1px solid black;
         border-radius: 20px;
         font-family: inherit;
     }
@@ -178,7 +166,7 @@
     div.find,
     div.about_us {
         display: inline-block;
-        margin-top: 50px;
+        margin-top: 100px;
         font-size: 36px;
         font-weight: bold;
         background: linear-gradient(to top right, orange, lightyellow, lightblue);
@@ -353,9 +341,12 @@
     }
 
     #p {
-        text-align: left;
+        display: flex;
+        align-self: center;
         padding: 15px 0;
-        font-size: 18px;
+        font-size: 22px;
+        text-align: justify;
+        width: 800px;
     }
 
     .column {
@@ -413,13 +404,17 @@
     .c-img-title {
         position: absolute;
         bottom: 15px;
-        right: 15px;
+        /* right: 15px; */
         color: white;
+        text-align: right;
         font-size: 18px;
         font-weight: 600;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-        background-color: rgba(0, 0, 0, 0.45);
+        background:linear-gradient( to right, rgba(251, 154, 44, 0.4), rgba(251, 154, 44, 0.9));
+        width:100%;
         animation: fade 8s infinite;
+        padding: 0 5px;
+        border-radius: 10px;
     }
 
     .c3 img {
@@ -517,19 +512,109 @@
     .c3 img:nth-of-type(2) {
         object-position: 35% 50%;
     }
+
+    header{
+        background: linear-gradient(to bottom, white, lightblue);
+    }
+
+    div.logo span{
+        font-weight: bold;
+        color:rgb(43, 108, 96);
+        font-family:Georgia, 'Times New Roman', Times, serif
+    }
+
+    .hero-box h1{
+        color:rgb(43, 108, 96);
+    }
+
+    .hero-box p:nth-of-type(1){
+        color: chocolate;
+        font-style: italic;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .hero-box button{
+        font-size: 22px;
+        background: linear-gradient(135deg, rgba(4, 34, 54, 0.839), rgba(255, 255, 255, 0.3));
+        border: 1px solid black;
+        box-shadow: 3px 3px 7px gray;
+        text-shadow: 3px 3px 7px gray;
+    }
+
+    .hero-box button:hover{
+        background: linear-gradient(to right, chocolate, white);
+        border-color: white;
+        transform: scale(1.01);
+        cursor: pointer;
+    }
+
+    
+    i{
+        font-size: 26px;
+        margin-left: 5px;
+
+    }
+
+    .right-cluster > form{
+        border: 1px solid;
+        border-radius: 20px;
+    }
+
+    select#lang {
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .language i{
+        position: relative;
+        top: 3px;
+    }
+
+    select#lang:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .c-img-title p{
+        font-style: italic;
+    }
+
+    .menu li > a{
+        text-decoration: none;
+        color: rgb(6, 94, 96);
+    }
 </style>
 
 <body>
-
-    <nav>
+    <header>
+        <nav>
         <div class="head">
-            <div class="logo"><img src="./images/logoweb.png"><span>HO CHI MINH CITY-LOCAL TRAVEL</span></div>
+            <div class="logo"><img src="./images/logoweb.png"><span>H.C.M.C Travel</span></div>
             <div class="right-cluster">
-                <div class="select-lang">
-                    <button class="language active">EN</button>
-                    <span>/</span>
-                    <button class="language">VI</button>
-                </div>
+                <form action="" method="get" class="language">
+                    <i class="fa-solid fa-globe" style="color: rgb(92, 183, 181);"></i>
+                    <select name="lang" id="lang">
+                        <option value="" disabled selected hidden>Language</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="en" selected>English</option>
+                        <option value="zh">中文</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="ru">Русский</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="th">ไทย</option>
+                        <option value="id">Bahasa Indonesia</option>
+                        <option value="ms">Bahasa Melayu</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="ar">العربية</option>
+                        <option value="it">Italiano</option>
+                    </select>
+                </form>
                 <div class="sign_in">Sign in</div>
                 <div class="user"><img src="./images/avata.jpg"></div>
             </div>
@@ -537,12 +622,13 @@
         </div>
 
         <ul class="menu">
-            <li>Home</li>
-            <li class="find-menu">Find ideal destinations</li>
-            <li class="about">About Us</li>
-            <li>Contact</li>
+            <li><a href="#">Home</a></li>
+            <li class="find-menu"><a href="#">Find ideal destinations</a></li>
+            <li class="about"><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
+    </header>
 
     <div class="hero"> <img src="./images/hero.png">
         <div class="hero-box">
@@ -647,22 +733,37 @@
             <div class="c-img">
                 <img src="./images/dragonWharf.jpg" alt="dragonWharf">
                 <img src="./images/HoThiKyFoodMarket.jpg" alt="HoThiKyFoodMarket">
-                <span class="c-img-title">Bến Nhà Rồng</span>
-                <span class="c-img-title">Phố Ẩm Thưc Hồ Thị Kỷ</span>
+                <span class="c-img-title">Bến Nhà Rồng
+                    <br>
+                    <p>Dragon Wharf</p>
+                </span>
+                <span class="c-img-title">Phố Ẩm Thưc Hồ Thị Kỷ
+                    <br>
+                    <p>Ho Thi Ky Food Market</p>
+                </span>
             </div>
         </div>
         <div class="column col2">
             <div class="c-img">
                 <img src="./images/IndependencePalace.jpg" alt="IndependencePalace">
                 <img src="./images/WarRemnantsMuseum.jpg" alt="WarRemnantsMuseum">
-                <span class="c-img-title">Dinh Độc Lập</span>
-                <span class="c-img-title">Bảo Tàng Chứng Tích Chiến Tranh</span>
+                <span class="c-img-title">Dinh Độc Lập
+                    <br>
+                    <p>Independence Palace</p>
+                </span>
+                <span class="c-img-title">Bảo Tàng Chứng Tích Chiến Tranh
+                    <br>
+                    <p>War Remnants Museum</p>
+                </span>
 
             </div>
             <div class="c-img">
                 <img src="./images/BenThanhMarket.jpg" alt="BenThanhMarket">
                 <img src="./images/waterBus.jpg" alt="waterBus">
-                <span class="c-img-title">Chợ Bến Thành</span>
+                <span class="c-img-title">Chợ Bến Thành
+                    <br>
+                    <p>Ben Thanh Market</p>
+                </span>
                 <span class="c-img-title">Water Bus</span>
             </div>
         </div>
@@ -670,8 +771,14 @@
             <div class="c-img c3">
                 <img src="./images/SaigonNotre-DameCathedral.jpg" alt="SaigonNotre-DameCathedral">
                 <img src="./images/SaiGonZoo.jpg" atl="SaiGonZoo">
-                <span class="c-img-title">Nhà Thờ Đức Bà</span>
-                <span class="c-img-title">Thảo Cầm Viên</span>
+                <span class="c-img-title">Nhà Thờ Đức Bà
+                    <br>
+                    <p>Saigon Notre-Dame Cathedral</p>
+                </span>
+                <span class="c-img-title">Thảo Cầm Viên
+                    <br>
+                    <p>Sai Gon Zoo</p>
+                </span>
             </div>
             <form action="search">
                 <label for="place_name">Search for place: </label>
